@@ -180,7 +180,7 @@
    */
   setTimeout(function () {
     document.getElementById('filters-sectionals').click();
-  }, 400)
+  }, 500)
 
   /**
    * Initiate portfolio lightbox 
