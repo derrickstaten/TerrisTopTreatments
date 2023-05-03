@@ -400,7 +400,6 @@ section {
 
 .home .bigimage-box {
   background: url("../img/home.jpg") center center no-repeat;
-  /* background: url("../img/cover-photos/club-chairs-green-velvet-in-home.jpg") center center no-repeat; */
   background-size: cover;
   min-height: 500px;
 }
