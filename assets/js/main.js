@@ -231,9 +231,4 @@
     selector: '.galleery-lightbox'
   });
 
-  /**
-   * Initiate Pure Counter 
-   */
-  new PureCounter();
-
 })()
