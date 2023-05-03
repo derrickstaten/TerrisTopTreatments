@@ -395,6 +395,7 @@ section {
 
 .home .bigimage-box {
   background: url("../img/home.jpg") center center no-repeat;
+  /* background: url("../img/cover-photos/club-chairs-green-velvet-in-home.jpg") center center no-repeat; */
   background-size: cover;
   min-height: 500px;
 }
@@ -444,6 +445,34 @@ section {
     margin-right: -15px;
   }
 
+}
+
+/*--------------------------------------------------------------
+# Services, Prices and Getting Started
+--------------------------------------------------------------*/
+
+.services h2,
+.prices h2,
+.getting-started h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.services h4,
+.prices h4,
+.getting-started h4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.prices table {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.services li,
+.getting-started li {
+  margin: 15px 0;
 }
 
 /*--------------------------------------------------------------
@@ -600,87 +629,6 @@ section {
 .portfolio .portfolio-wrap:hover .portfolio-info::after {
   bottom: 15px;
   right: 15px;
-}
-
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-.services .icon-box {
-  padding: 30px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  margin: 0 10px 40px 10px;
-  background: #fff;
-  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
-  transition: all 0.3s ease-in-out;
-}
-
-.services .icon-box:hover {
-  transform: translateY(-5px);
-}
-
-.services .icon {
-  position: absolute;
-  left: -20px;
-  top: calc(50% - 30px);
-}
-
-.services .icon i {
-  font-size: 64px;
-  line-height: 1;
-  transition: 0.5s;
-}
-
-.services .title {
-  margin-left: 40px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-.services .title a {
-  color: #111;
-}
-
-.services .icon-box:hover .title a {
-  color: #49b5e7;
-}
-
-.services .description {
-  font-size: 14px;
-  margin-left: 40px;
-  line-height: 24px;
-  margin-bottom: 0;
-}
-
-.services-bottom {
-  text-align: center;
-}
-
-/*--------------------------------------------------------------
-# Prices and Getting Started
---------------------------------------------------------------*/
-
-.prices h2,
-.getting-started h2 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.prices h4,
-.getting-started h4 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.prices table {
-  border-collapse: separate;
-  border-spacing: 0 8px;
-}
-
-.getting-started li {
-  margin: 15px 0;
 }
 
 /*--------------------------------------------------------------
