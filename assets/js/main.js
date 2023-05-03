@@ -149,6 +149,20 @@
   /**
    * Porfolio isotope and filter
    */
+  function makeOnlySectionalsActive(portfolioIsotope, portfolioFilters) {
+    portfolioFilters.forEach(function (el) {
+      if (el.getAttribute('data-filter') === '.filter-sectionals') {
+        el.classList.add('filter-active');
+      }
+      else {
+        el.classList.remove('filter-active')
+      }
+    });
+    portfolioIsotope.arrange({
+      filter: '.filter-sectionals'
+    });
+  }
+
   window.addEventListener('DOMContentLoaded', () => {
     let portfolioContainer = select('.portfolio-container');
     if (portfolioContainer) {
@@ -174,21 +188,26 @@
       }, true);
 
       // Initial setup so that only sectionals is active
-      portfolioFilters.forEach(function (el) {
-        if (el.getAttribute('data-filter') === '.filter-sectionals') {
-          el.classList.add('filter-active');
-        }
-        else {
-          el.classList.remove('filter-active')
-        }
-      });
-      portfolioIsotope.arrange({
-        filter: '.filter-sectionals'
-      });
-
+      makeOnlySectionalsActive(portfolioIsotope, portfolioFilters);
     }
-
   });
+
+  // Once more on load so that images don't appear truncated part of the time. Hacky.
+  window.addEventListener('load', () => {
+    let portfolioContainer = select('.portfolio-container');
+    if (portfolioContainer) {
+      let portfolioIsotope = new Isotope(portfolioContainer, {
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows'
+      });
+
+      let portfolioFilters = select('#portfolio-flters li', true);
+
+      // One more time
+      makeOnlySectionalsActive(portfolioIsotope, portfolioFilters);
+    }
+  });
+
 
   /**
    * Initiate portfolio lightbox 
