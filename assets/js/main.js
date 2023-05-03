@@ -159,6 +159,7 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
+      // Set up click handler for gallery filters
       on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
         portfolioFilters.forEach(function (el) {
@@ -171,16 +172,23 @@
         });
 
       }, true);
+
+      // Initial setup so that only sectionals is active
+      portfolioFilters.forEach(function (el) {
+        if (el.getAttribute('data-filter') === '.filter-sectionals') {
+          el.classList.add('filter-active');
+        }
+        else {
+          el.classList.remove('filter-active')
+        }
+      });
+      portfolioIsotope.arrange({
+        filter: '.filter-sectionals'
+      });
+
     }
 
   });
-
-  /**
-   * Very hacky way to start with "Chairs" selected
-   */
-  setTimeout(function () {
-    document.getElementById('filters-sectionals').click();
-  }, 500)
 
   /**
    * Initiate portfolio lightbox 
