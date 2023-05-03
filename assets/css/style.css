@@ -329,7 +329,12 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 30vh;
+}
+
+@media(min-height: 992px) {
+  #hero {
+    height: 30vh;
+  }
 }
 
 #hero .container {
